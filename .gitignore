@@ -3,3 +3,7 @@
 \build
 *.log
 *.class
+/gradle/
+gradlew
+gradlew.bat
+.gitignore
