@@ -12,28 +12,6 @@ public class RegistrationWithPageObjectsTests extends TestBase {
     @Test
     void successfulRegistrationTest() {
 
-        Faker faker = new Faker();
-        SimpleDateFormat year = new SimpleDateFormat("yyyy"),
-                         month = new SimpleDateFormat("MMMM", Locale.ENGLISH),
-                         day = new SimpleDateFormat("dd");
-
-
-        String firstName = faker.name().firstName(),
-                lastName = faker.name().lastName(),
-                email = faker.internet().emailAddress(),
-                gender = "Male",
-                phoneNumber = faker.phoneNumber().subscriberNumber(10),
-                yearOfBirth = year.format(faker.date().birthday()),
-                monthOfBirth = month.format(faker.date().birthday()),
-                dayOfBirth = day.format(faker.date().birthday()),
-                subjects = "Math",
-                hobbies = "Sports",
-                picture = "picture.jpeg",
-                address = faker.address().fullAddress(),
-                state = "Rajasthan",
-                city = "Jaiselmer";
-
-
         registrationPage.openPage()
                 .setFirstName(firstName)
                 .setLastName(lastName)
